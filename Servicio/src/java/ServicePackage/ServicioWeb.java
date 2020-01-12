@@ -5,6 +5,7 @@
  */
 package ServicePackage;
 
+import Clases.Usuario;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -22,5 +23,19 @@ public class ServicioWeb {
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "accederCuenta")
+    public Boolean accederCuenta(@WebParam(name = "id") String id, @WebParam(name = "password") String password) {
+        for(Usuario u : Administrador.obtenerUsuarios()){
+            if(u.getId().equalsIgnoreCase(id) && u.getPassword().equals(password)){
+              return true;  
+            }
+        }
+            
+        return false;
     }
 }
