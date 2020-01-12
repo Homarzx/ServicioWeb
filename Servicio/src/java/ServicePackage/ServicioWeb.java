@@ -6,6 +6,7 @@
 package ServicePackage;
 
 import Clases.Curso;
+import Clases.Recurso;
 import Clases.Usuario;
 import java.util.ArrayList;
 import javax.jws.WebService;
@@ -42,4 +43,18 @@ public class ServicioWeb {
         
         return Administrador.obtenerCurso();
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "obtenerRecurso")
+    public Recurso obtenerRecurso(@WebParam(name = "id") String id) {
+        for(Recurso r: Administrador.obtenerRecurso()){
+            if(r.getId().equals(id)){
+                return r;
+            }
+        }
+        return null;
+    }
+    
 }

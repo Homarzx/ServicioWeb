@@ -7,8 +7,10 @@ package ServicePackage;
 
 import Clases.Curso;
 import Clases.LisFav;
+import Clases.Recurso;
 import Clases.Usuario;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -29,5 +31,10 @@ public class Administrador {
         return cursos;
     }
     
+    public static ArrayList<Recurso> obtenerRecurso(){
+        ArrayList<Recurso> recurso = new ArrayList<>();
+        recurso.add(new Recurso("al21","algebra matricial video 1",new Date(),"https://github.com/Homarzx/ServicioWeb/commits/master"));
+        return recurso;
+    }
     
 }
