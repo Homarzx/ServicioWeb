@@ -25,7 +25,10 @@ public class Recurso {
         this.nombre = nombre;
         this.fecha = fecha;
         this.url = url;
+        comentarios = new ArrayList<>();
     }
+
+  
 
     public Recurso(String nombre, Date fecha, String url, ArrayList<Comentario> comentarios) {
         this.nombre = nombre;
@@ -67,7 +70,22 @@ public class Recurso {
         this.url = url;
     }
     
+    public void agregarComentario(String comentario){
+        comentarios.add(new Comentario(comentario));
+    }
     
+     public void removerComentario(String id){
+        for(Comentario c: comentarios){
+            if(c.getId().equals(id)){
+                comentarios.remove(c);
+                break;
+            }
+        }
+    }
     
+      @Override
+    public String toString() {
+        return "Recurso{" + "id=" + id + ", nombre=" + nombre + ", fecha=" + fecha + ", url=" + url + ", comentarios=" + comentarios + '}';
+    }
     
 }

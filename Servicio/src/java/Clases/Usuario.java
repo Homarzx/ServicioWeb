@@ -5,8 +5,6 @@
  */
 package Clases;
 
-import java.util.LinkedList;
-
 /**
  *
  * @author homar
@@ -14,6 +12,8 @@ import java.util.LinkedList;
 public class Usuario {
     private String id;
     private String password;
+
+  
     private String nombre;
     private int edad;
     private  String foto;
@@ -85,5 +85,9 @@ public class Usuario {
         this.lista = lista;
     }
     
+      @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", password=" + password + ", nombre=" + nombre + ", edad=" + edad + ", foto=" + foto + ", lista=" + lista + '}';
+    }
     
 }

@@ -21,6 +21,8 @@ public class Curso {
         this.recursos = recursos;
     }
 
+ 
+
     public String getId() {
         return id;
     }
@@ -43,6 +45,10 @@ public class Curso {
 
     public void setRecursos(LisFav recursos) {
         this.recursos = recursos;
+    }
+       @Override
+    public String toString() {
+        return "Curso{" + "id=" + id + ", nombre=" + nombre + ", recursos=" + recursos + '}';
     }
     
     

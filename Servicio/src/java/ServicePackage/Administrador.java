@@ -37,4 +37,10 @@ public class Administrador {
         return recurso;
     }
     
+     public static ArrayList<LisFav> obtenerLF(){
+        ArrayList<LisFav> lfs = new ArrayList<>();
+        lfs.add(new LisFav("1245",new ArrayList<Recurso>()));
+        return lfs;
+    }
+    
 }

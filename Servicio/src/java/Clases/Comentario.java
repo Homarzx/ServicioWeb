@@ -18,6 +18,7 @@ public class Comentario {
         this.texto = texto;
     }
 
+
     public Comentario(String id, String texto) {
         this.id = id;
         this.texto = texto;
@@ -40,5 +41,9 @@ public class Comentario {
     }
     
     
+    @Override
+    public String toString() {
+        return "Comentario{" + "id=" + id + ", texto=" + texto + '}';
+    }
     
 }

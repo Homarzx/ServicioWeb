@@ -25,11 +25,10 @@ public class LisFav {
         this.recursos = recursos;
     }
 
-    public LisFav() {
-    }
-    
-    
 
+    public LisFav() {
+       recursos = new ArrayList<>();
+    }
     
     public String getId() {
         return id;
@@ -45,6 +44,16 @@ public class LisFav {
 
     public void setRecursos(ArrayList<Recurso> recursos) {
         this.recursos = recursos;
+    }
+    
+    public void agregarRecurso(Recurso r){
+        recursos.add(r);
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "LisFav{" + "id=" + id + ", recursos=" + recursos + '}';
     }
     
     
