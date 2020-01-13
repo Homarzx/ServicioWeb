@@ -56,5 +56,77 @@ public class ServicioWeb {
         }
         return null;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "comentar")
+    public String comentar(@WebParam(name = "recursoID") String recursoID) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "crearRecurso")
+    public Boolean crearRecurso(@WebParam(name = "Recurso") Recurso Recurso) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "eliminarRecurso")
+    public String eliminarRecurso() {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "agregarLista")
+    public String agregarLista(@WebParam(name = "videoID") String videoID) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "eliminarLista")
+    public Boolean eliminarLista(@WebParam(name = "videoID") String videoID) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "crearCurso")
+    public Boolean crearCurso(@WebParam(name = "Curso") Curso Curso) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "eliminarCurso")
+    public Boolean eliminarCurso(@WebParam(name = "cursoID") String cursoID) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "eliminarComentario")
+    public Boolean eliminarComentario(@WebParam(name = "comentarioID") String comentarioID) {
+        //TODO write your implementation code here:
+        return null;
+    }
     
 }
