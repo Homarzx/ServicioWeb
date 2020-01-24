@@ -21,16 +21,10 @@ public class Material extends AppCompatActivity {
         recyclerView = (RecyclerView)findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter =  new RecyclerViewAdapter(obtenerVideos());
+        adapter =  new RecyclerViewAdapter(MaterialDeterminado.obtenerVideos());
         recyclerView.setAdapter(adapter);
 
     }
-    public List<Recurso> obtenerVideos(){
-        List<Recurso> recursos = new ArrayList<>();
-        recursos.add(new Recurso("https://www.youtube.com/watch?v=QFuFaNsUX0c"));
-        recursos.add(new Recurso("https://youtu.be/9MEIwUIaaVk?list=PL2dWUhgFt1yns0e2XhLsEUOekNpXMiFvw"));
-        recursos.add(new Recurso("https://youtu.be/9MEIwUIaaVk?list=PL2dWUhgFt1yns0e2XhLsEUOekNpXMiFvw"));
-        return recursos;
-    }
+
 
 }

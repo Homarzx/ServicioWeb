@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle t;
     private NavigationView nv;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent perfil = new Intent (this,Perfil.class);
 
-
+        System.out.println(Administrador.actual);
 
         dl = (DrawerLayout)findViewById(R.id.activity_main);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
@@ -66,20 +67,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirActivity(int i){
         if(i == 1){
-            Intent perfil = new Intent (this,Perfil.class);
+            Intent perfil = new Intent (this,P.class);
             startActivity(perfil);
         }
         else if (i == 2){
-            Intent perfil = new Intent (this,Cursos.class);
+            Intent perfil = new Intent (this,Cu.class);
             startActivity(perfil);
         }
         else if (i == 3){
+            MaterialDeterminado.control = 0;
             Intent perfil = new Intent (this,Material.class);
             startActivity(perfil);
         }
     }
 
     @Override
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if(t.onOptionsItemSelected(item))

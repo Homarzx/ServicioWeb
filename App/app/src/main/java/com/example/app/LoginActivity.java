@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Administrador.generarUsuarios();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -47,9 +48,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public boolean login(String user, String pass){
-        if(user.equals("homar") && pass.equals("Epsilon1")){
-            Toast.makeText(LoginActivity.this, "Bienvenido " + user,Toast.LENGTH_SHORT).show();
-            return true;
+        for(Usuario u: Administrador.usuarios){
+            if(user.equals(u.user) && pass.equals(u.pass)){
+                Toast.makeText(LoginActivity.this, "Bienvenido " + user,Toast.LENGTH_SHORT).show();
+                Administrador.actual(u);
+                return true;
+            }
         }
         Toast.makeText(LoginActivity.this, "Datos incorrectos " + user,Toast.LENGTH_SHORT).show();
         return false;
