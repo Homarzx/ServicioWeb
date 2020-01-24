@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/perfil"
-        android:icon="@drawable/ic_menu_share"
+        android:icon="@drawable/profile"
         android:title="Mi Perfil"/>
     <item android:id="@+id/curso"
-        android:icon="@drawable/ic_menu_share"
-        android:title="Cursos"/>
+        android:icon="@drawable/book"
+        android:title="Curso"/>
     <item android:id="@+id/material"
         android:icon="@drawable/ic_menu_share"
-        android:title="Subir Material"/>
+        android:title="Material"/>
 
 </menu>

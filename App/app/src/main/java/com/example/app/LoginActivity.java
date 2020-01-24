@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Bienvenido " + user,Toast.LENGTH_SHORT).show();
             return true;
         }
+        Toast.makeText(LoginActivity.this, "Datos incorrectos " + user,Toast.LENGTH_SHORT).show();
         return false;
     }
 }

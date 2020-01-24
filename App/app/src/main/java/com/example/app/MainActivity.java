@@ -2,6 +2,7 @@ package com.example.app;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent perfil = new Intent (this,Perfil.class);
+
+
 
         dl = (DrawerLayout)findViewById(R.id.activity_main);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
@@ -41,11 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.perfil:
-                        Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();
+                        abrirActivity(1);break;
                     case R.id.curso:
-                        Toast.makeText(MainActivity.this, "Settings",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Settings",Toast.LENGTH_SHORT).show();abrirActivity(2);break;
                     case R.id.material:
-                        Toast.makeText(MainActivity.this, "My Cart",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Material",Toast.LENGTH_SHORT).show();abrirActivity(3);break;
                     default:
                         return true;
                 }
@@ -57,6 +62,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void abrirActivity(int i){
+        if(i == 1){
+            Intent perfil = new Intent (this,Perfil.class);
+            startActivity(perfil);
+        }
+        else if (i == 2){
+            Intent perfil = new Intent (this,Cursos.class);
+            startActivity(perfil);
+        }
+        else if (i == 3){
+            Intent perfil = new Intent (this,Material.class);
+            startActivity(perfil);
+        }
     }
 
     @Override
